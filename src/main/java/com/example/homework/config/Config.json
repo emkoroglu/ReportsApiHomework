@@ -1,0 +1,9 @@
+{
+  "email": "demo@bumin.com.tr",
+  "password": "cjaiU8CV",
+  "loginUrl" : "https://sandbox-reporting.rpdpymnt.com/api/v3/merchant/user/login",
+  "transactionListUrl" : "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction/list",
+   "transactionUrl" : "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction",
+  "reportUrl" : "https://sandbox-reporting.rpdpymnt.com/api/v3/transactions/report",
+  "clientUrl" :  "https://sandbox-reporting.rpdpymnt.com/api/v3/client"
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1>Report List</h1>
+
+    </div>
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Currency</th>
+                <th scope="col">TransactionId</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item: ${ViewModel}">
+                <td th:text="${item.email}"></td>
+                <td th:text="${item.firstName}" />
+                <td th:text="${item.lastName}" />
+                <td th:text="${item.amount}" />
+                <td th:text="${item.currency}" />
+                <td>
+                    <a th:href="@{'/transaction/?transactionId=' + ${item.transactionId}}">Get Transaction</a> |
+                    <a th:href="@{'/client/?transactionId=' + ${item.transactionId}}">Get Client</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        </h1>
+    </div>
+</div>
+
+</body>
+</html>
